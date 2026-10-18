@@ -3,7 +3,7 @@
 #   fly secrets set ALLOWED_ORIGINS=https://your-domain
 #   fly deploy
 app = "path-blocker-server"
-primary_region = "lhr"
+primary_region = "fra"
 
 [build]
   dockerfile = "apps/server/Dockerfile"
