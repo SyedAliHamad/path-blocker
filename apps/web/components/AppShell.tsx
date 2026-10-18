@@ -4,10 +4,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState, type ReactNode } from 'react';
 
+// The media library lives at /admin and is reached by typing the URL. It is
+// kept out of the nav because it is a tool for running the game, not something
+// players should wander into — not as a security measure, since the route is
+// public and the library it edits is the visitor’s own browser storage.
 const NAV = [
   { href: '/', label: 'Play' },
   { href: '/rules', label: 'How to play' },
-  { href: '/admin', label: 'Media library' },
 ];
 
 /**
