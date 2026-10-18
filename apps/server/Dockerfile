@@ -16,9 +16,9 @@ FROM node:24-alpine
 WORKDIR /app
 ENV NODE_ENV=production
 
-# The server is bundled to a single file, so the runtime image carries no
-# node_modules at all.
+# Everything is bundled into this one file, dependencies included, so the
+# runtime image carries no node_modules at all.
 COPY --from=build /app/apps/server/dist ./dist
 
 EXPOSE 8787
-CMD ["node", "dist/server.js"]
+CMD ["node", "dist/server.cjs"]

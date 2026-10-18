@@ -1,12 +1,14 @@
-# Fly deploys from the repository root so the build can see the workspace.
-#   fly launch --no-deploy --dockerfile apps/server/Dockerfile
-#   fly secrets set ALLOWED_ORIGINS=https://your-domain
-#   fly deploy
+# Deploy from the repository root, so the Docker build context is the whole
+# workspace (the Dockerfile copies it to satisfy npm ci):
+#   fly deploy . --config apps/server/fly.toml
+#   fly secrets set ALLOWED_ORIGINS=https://your-domain --app path-blocker-server
+#
+# dockerfile is resolved relative to this file, not to the build context.
 app = "path-blocker-server"
 primary_region = "fra"
 
 [build]
-  dockerfile = "apps/server/Dockerfile"
+  dockerfile = "Dockerfile"
 
 [env]
   PORT = "8787"
