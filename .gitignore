@@ -3,10 +3,11 @@ dist/
 .next/
 out/
 *.tsbuildinfo
-.env*
-!.env.example
 .DS_Store
 coverage/
-
 .vercel
+
+# Secrets stay out; the documented example stays in. The negation has to come
+# after the pattern it undoes, or the last matching rule wins and hides it.
 .env*
+!.env.example
