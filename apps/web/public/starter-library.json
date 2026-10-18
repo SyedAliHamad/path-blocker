@@ -1,0 +1,824 @@
+{
+  "version": 1,
+  "music": [
+    {
+      "id": "starter-music-1",
+      "label": "Chiptune bed 1",
+      "gifUrl": null,
+      "soundUrl": "https://cdn.pixabay.com/audio/2026/08/19/audio_cab3803f16.mp3",
+      "weight": 1
+    },
+    {
+      "id": "starter-music-2",
+      "label": "Chiptune bed 2",
+      "gifUrl": null,
+      "soundUrl": "https://cdn.pixabay.com/audio/2026/01/05/audio_4998066f0b.mp3",
+      "weight": 1
+    },
+    {
+      "id": "starter-music-3",
+      "label": "Chiptune bed 3",
+      "gifUrl": null,
+      "soundUrl": "https://cdn.pixabay.com/audio/2026/08/10/audio_4534975e39.mp3",
+      "weight": 1
+    },
+    {
+      "id": "starter-music-4",
+      "label": "Chiptune bed 4",
+      "gifUrl": null,
+      "soundUrl": "https://cdn.pixabay.com/audio/2026/05/07/audio_a01a445eef.mp3",
+      "weight": 1
+    },
+    {
+      "id": "starter-music-5",
+      "label": "Chiptune bed 5",
+      "gifUrl": null,
+      "soundUrl": "https://cdn.pixabay.com/audio/2024/05/28/audio_c45d06345a.mp3",
+      "weight": 1
+    },
+    {
+      "id": "starter-music-6",
+      "label": "Chiptune bed 6",
+      "gifUrl": null,
+      "soundUrl": "https://cdn.pixabay.com/audio/2026/06/27/audio_ce6b5c2f4e.mp3",
+      "weight": 1
+    },
+    {
+      "id": "starter-music-7",
+      "label": "Chiptune bed 7",
+      "gifUrl": null,
+      "soundUrl": "https://cdn.pixabay.com/audio/2026/03/21/audio_bc75e850fb.mp3",
+      "weight": 1
+    },
+    {
+      "id": "starter-music-8",
+      "label": "Chiptune bed 8",
+      "gifUrl": null,
+      "soundUrl": "https://cdn.pixabay.com/audio/2025/03/14/audio_9c2e1a146a.mp3",
+      "weight": 1
+    }
+  ],
+  "scenarios": {
+    "game-start": {
+      "actor": [],
+      "target": []
+    },
+    "rematch": {
+      "actor": [
+        {
+          "id": "starter-ding-back-for-more",
+          "name": "Back for more",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-ding",
+              "label": "Ding",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/ding-sound-effect_2.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": []
+    },
+    "first-wall": {
+      "actor": [
+        {
+          "id": "starter-recordScratch-here-we-go",
+          "name": "Here we go",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-recordScratch",
+              "label": "Record Scratch",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/record-scratch.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": []
+    },
+    "wall-placed": {
+      "actor": [],
+      "target": []
+    },
+    "detour-mild": {
+      "actor": [
+        {
+          "id": "starter-bonk-light-taunt",
+          "name": "Light taunt",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-bonk",
+              "label": "Bonk",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/bonk_BEtiM8g.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-boing",
+              "label": "Cartoon Boing",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/cartoon-boing_7vRWDlc.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-bruh-mild-annoyance",
+          "name": "Mild annoyance",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-bruh",
+              "label": "BRUH",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/movie_1.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-oof",
+              "label": "Roblox Oof",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/roblox-death-sound_1.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "detour-big": {
+      "actor": [
+        {
+          "id": "starter-sheesh-taunt",
+          "name": "Taunt",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-sheesh",
+              "label": "Sheesh",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/original-sheesh.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-vineBoom",
+              "label": "Vine Boom",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/vine-boom.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-metalPipe",
+              "label": "Metal Pipe Clang",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/metal-pipe-clang.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-oof-pain",
+          "name": "Pain",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-oof",
+              "label": "Roblox Oof",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/roblox-death-sound_1.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-sadTrombone",
+              "label": "Sad Trombone",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/sad-trombone.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "detour-brutal": {
+      "actor": [
+        {
+          "id": "starter-emotionalDamage-devastating",
+          "name": "Devastating",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-emotionalDamage",
+              "label": "Emotional Damage",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/emotional-damage-meme.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-airhorn",
+              "label": "MLG Airhorn",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/airhorn.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-evilLaugh",
+              "label": "Evil Laugh",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/evillaugh.swf.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-fahh-agony",
+          "name": "Agony",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-fahh",
+              "label": "FAHHHHHHHHHHHHHH",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/fahhhhhhhhhhhhhh.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-faaah",
+              "label": "FAAAH",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/faaah.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-noGod",
+              "label": "No God Please No",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/no-god-please-no-noooooooooo.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-sadViolin",
+              "label": "Sad Violin",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/tf_nemesis.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "wall-wasted": {
+      "actor": [
+        {
+          "id": "starter-crickets-awkward",
+          "name": "Awkward",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-crickets",
+              "label": "Crickets",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/crickets-chirping.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-slowClap",
+              "label": "Sarcastic Slow Clap",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/slow-clap_acFgE6G.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-animeWow-unbothered",
+          "name": "Unbothered",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-animeWow",
+              "label": "Anime Wow",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/anime-wow-sound-effect.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "wall-backfired": {
+      "actor": [
+        {
+          "id": "starter-missionFailed-self-own",
+          "name": "Self own",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-missionFailed",
+              "label": "Mission Failed",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/mission-failed-well-get-em-next-time.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-bruh",
+              "label": "BRUH",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/movie_1.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-laughTrack-schadenfreude",
+          "name": "Schadenfreude",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-laughTrack",
+              "label": "Laugh Track",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/comic003.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "wall-illegal": {
+      "actor": [
+        {
+          "id": "starter-error-nope",
+          "name": "Nope",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-error",
+              "label": "Error",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/error_CDOxCYm.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": []
+    },
+    "walls-exhausted": {
+      "actor": [
+        {
+          "id": "starter-sadTrombone-empty-rack",
+          "name": "Empty rack",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-sadTrombone",
+              "label": "Sad Trombone",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/sad-trombone.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-ding-coast-is-clear",
+          "name": "Coast is clear",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-ding",
+              "label": "Ding",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/ding-sound-effect_2.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "lead-change": {
+      "actor": [
+        {
+          "id": "starter-sheesh-overtake",
+          "name": "Overtake",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-sheesh",
+              "label": "Sheesh",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/original-sheesh.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-animeWow-wait-what",
+          "name": "Wait what",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-animeWow",
+              "label": "Anime Wow",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/anime-wow-sound-effect.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "comeback": {
+      "actor": [
+        {
+          "id": "starter-victory-resurgence",
+          "name": "Resurgence",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-victory",
+              "label": "Victory Fanfare",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/victory-fanfare-ffvii.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-airhorn",
+              "label": "MLG Airhorn",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/airhorn.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-noGod-collapse",
+          "name": "Collapse",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-noGod",
+              "label": "No God Please No",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/no-god-please-no-noooooooooo.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "runaway": {
+      "actor": [
+        {
+          "id": "starter-whyRunning-gone",
+          "name": "Gone",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-whyRunning",
+              "label": "Why Are You Running?",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/why-are.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-whyRunning-chasing",
+          "name": "Chasing",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-whyRunning",
+              "label": "Why Are You Running?",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/why-are.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "dead-heat": {
+      "actor": [
+        {
+          "id": "starter-dunDunDun-tension",
+          "name": "Tension",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-dunDunDun",
+              "label": "Dun Dun Dunnn",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/dun-dun-dun-sound-effect-brass_8nFBccR.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": []
+    },
+    "one-square-away": {
+      "actor": [
+        {
+          "id": "starter-heartbeat-nearly",
+          "name": "Nearly",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-heartbeat",
+              "label": "Heartbeat",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/heartbeatloop.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-animeWow-panic",
+          "name": "Panic",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-animeWow",
+              "label": "Anime Wow",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/anime-wow-sound-effect.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "jump-over": {
+      "actor": [
+        {
+          "id": "starter-boing-hop",
+          "name": "Hop",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-boing",
+              "label": "Cartoon Boing",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/cartoon-boing_7vRWDlc.mp3",
+              "weight": 1
+            },
+            {
+              "id": "starter-boneCrack",
+              "label": "Bone Crack",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/bone-crack.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-oof-trampled",
+          "name": "Trampled",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-oof",
+              "label": "Roblox Oof",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/roblox-death-sound_1.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "diagonal-sidestep": {
+      "actor": [
+        {
+          "id": "starter-whoosh-smooth",
+          "name": "Smooth",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-whoosh",
+              "label": "Whoosh",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/whoosh-sfx.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": []
+    },
+    "standoff": {
+      "actor": [
+        {
+          "id": "starter-dunDunDun-face-off",
+          "name": "Face off",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-dunDunDun",
+              "label": "Dun Dun Dunnn",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/dun-dun-dun-sound-effect-brass_8nFBccR.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": []
+    },
+    "clock-low": {
+      "actor": [
+        {
+          "id": "starter-heartbeat-ticking-down",
+          "name": "Ticking down",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-heartbeat",
+              "label": "Heartbeat",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/heartbeatloop.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": []
+    },
+    "timed-out": {
+      "actor": [
+        {
+          "id": "starter-spongebobFail-fumbled",
+          "name": "Fumbled",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-spongebobFail",
+              "label": "SpongeBob Fail",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/spongebob-fail.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-laughTrack-laughing",
+          "name": "Laughing",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-laughTrack",
+              "label": "Laugh Track",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/comic003.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "game-won": {
+      "actor": [
+        {
+          "id": "starter-victory-victory",
+          "name": "Victory",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-victory",
+              "label": "Victory Fanfare",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/victory-fanfare-ffvii.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-sadViolin-defeat",
+          "name": "Defeat",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-sadViolin",
+              "label": "Sad Violin",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/tf_nemesis.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    "resign": {
+      "actor": [
+        {
+          "id": "starter-sadTrombone-gave-up",
+          "name": "Gave up",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-sadTrombone",
+              "label": "Sad Trombone",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/sad-trombone.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "id": "starter-slowClap-sarcasm",
+          "name": "Sarcasm",
+          "enabled": true,
+          "weight": 1,
+          "assets": [
+            {
+              "id": "starter-slowClap",
+              "label": "Sarcastic Slow Clap",
+              "gifUrl": null,
+              "soundUrl": "https://www.myinstants.com/media/sounds/slow-clap_acFgE6G.mp3",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "settings": {
+    "muted": false,
+    "volume": 0.7,
+    "musicVolume": 0.35,
+    "maxPerGame": 60,
+    "cooldownMs": 600,
+    "perScenarioCooldownMs": 1200,
+    "displayMs": 2600,
+    "maxSoundMs": 6000,
+    "cinematicMs": 4200
+  }
+}

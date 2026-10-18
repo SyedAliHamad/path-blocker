@@ -1,0 +1,33 @@
+# Fly deploys from the repository root so the build can see the workspace.
+#   fly launch --no-deploy --dockerfile apps/server/Dockerfile
+#   fly secrets set ALLOWED_ORIGINS=https://your-domain
+#   fly deploy
+app = "path-blocker-server"
+primary_region = "lhr"
+
+[build]
+  dockerfile = "apps/server/Dockerfile"
+
+[env]
+  PORT = "8787"
+
+[http_service]
+  internal_port = 8787
+  force_https = true
+  # Games live in the memory of one machine, so it must not be stopped
+  # underneath a game in progress.
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "10s"
+    method = "GET"
+    path = "/health"
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1

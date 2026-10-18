@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+
+/*
+ * One dark theme, defined as tokens so the board, panels and chrome stay in
+ * step. Board colours live here too: the SVG reads them through CSS variables
+ * rather than hard-coding hex values in component code.
+ *
+ * `static` matters: Tailwind drops theme variables that no utility class
+ * references, and the board reads several of these only through inline
+ * `var()` in SVG attributes.
+ */
+@theme static {
+  --color-surface: #0a0a0b;
+  --color-panel: #141416;
+  --color-panel-raised: #1c1c1f;
+  --color-edge: #2a2a2e;
+  --color-ink: #e8e8ea;
+  --color-ink-dim: #9a9aa2;
+  --color-ink-faint: #6b6b73;
+  --color-accent: #f0a830;
+  --color-accent-soft: #3a2a10;
+  --color-seat-0: #e2524a;
+  --color-seat-1: #4a90e2;
+  --color-seat-2: #52b788;
+  --color-seat-3: #b07ae2;
+  --color-cell: #202024;
+  --color-cell-goal-0: #2a1c1c;
+  --color-cell-goal-1: #1a2230;
+  --color-wall: #e3dfd6;
+  --color-wall-ghost: #6a6a72;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+html,
+body {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Board interactions should feel like a board, not a document. */
+.board svg {
+  touch-action: manipulation;
+}
+
+.board [data-interactive='true'] {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
