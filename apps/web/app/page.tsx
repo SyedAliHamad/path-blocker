@@ -26,7 +26,20 @@ export default function HomePage() {
           in. Free, in your browser, no account needed.
         </p>
 
-        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        <Link
+          href="/play/quick"
+          className="mt-6 flex items-center justify-between gap-4 rounded-lg bg-accent px-5 py-4 text-surface transition-opacity hover:opacity-90"
+        >
+          <span>
+            <span className="block text-base font-semibold">Play now</span>
+            <span className="mt-0.5 block text-xs opacity-80">
+              Matched with a random opponent — no account needed
+            </span>
+          </span>
+          <span aria-hidden className="text-xl">&rarr;</span>
+        </Link>
+
+        <div className="mt-3 grid gap-3 sm:grid-cols-2">
           <PlayWithFriends />
           {MODES.map((mode) => (
             <Link

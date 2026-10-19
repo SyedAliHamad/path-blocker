@@ -1,7 +1,8 @@
 import { createServer } from 'node:http';
 import { WebSocketServer, type WebSocket } from 'ws';
-import { isValidGameId, type ClientMessage, type ClockConfig } from '@pb/protocol';
+import { isValidGameId, makeGameId, type ClientMessage, type ClockConfig } from '@pb/protocol';
 import { EMPTY_ROOM_TTL_MS, Room, type Member } from './room';
+import { Matchmaker, type Waiting } from './matchmaker';
 
 const PORT = Number(process.env.PORT ?? 8787);
 
@@ -33,6 +34,23 @@ function roomFor(id: string): Room {
   return room;
 }
 
+/**
+ * Pairing players who asked for a random opponent.
+ *
+ * Seats are reserved at match time rather than on arrival, so both players
+ * keep the seats they were given even though neither has connected to the room
+ * yet — and nobody who guesses the room id can take one.
+ */
+const matchmaker = new Matchmaker((first, second) => {
+  let gameId = makeGameId();
+  while (rooms.has(gameId)) gameId = makeGameId();
+
+  const room = roomFor(gameId);
+  room.reserve(first.playerId, 0);
+  room.reserve(second.playerId, 1);
+  return gameId;
+});
+
 function originAllowed(origin: string | undefined): boolean {
   // An empty allow-list means "anything", which is what local development
   // wants; production sets ALLOWED_ORIGINS.
@@ -60,6 +78,7 @@ sockets.on('connection', (socket: WebSocket, request) => {
 
   let room: Room | null = null;
   let member: Member | null = null;
+  let queued: Waiting | null = null;
 
   const send = (message: unknown): void => {
     if (socket.readyState === socket.OPEN) socket.send(JSON.stringify(message));
@@ -75,6 +94,24 @@ sockets.on('connection', (socket: WebSocket, request) => {
 
     if (message.type === 'ping') {
       send({ type: 'pong' });
+      return;
+    }
+
+    if (message.type === 'queue') {
+      if (typeof message.playerId !== 'string') {
+        socket.close(1008, 'bad queue request');
+        return;
+      }
+      const entry: Waiting = { playerId: message.playerId, name: message.name, send };
+      queued = entry;
+      matchmaker.enter(entry);
+      return;
+    }
+
+    if (message.type === 'cancel-queue') {
+      if (queued) matchmaker.drop(queued);
+      queued = null;
+      send({ type: 'queue-cancelled' });
       return;
     }
 
@@ -117,6 +154,12 @@ sockets.on('connection', (socket: WebSocket, request) => {
   });
 
   socket.on('close', () => {
+    // A dropped connection must not leave a ghost in the queue for the next
+    // player to be matched against.
+    if (queued) {
+      matchmaker.drop(queued);
+      queued = null;
+    }
     if (room && member) {
       room.leave(member);
       room = null;

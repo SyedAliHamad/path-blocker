@@ -20,9 +20,29 @@ export type ClientMessage =
       readonly name?: string;
     }
   | { readonly type: 'command'; readonly command: GameCommand }
+  /**
+   * Ask to be paired with whoever else is waiting.
+   *
+   * Matchmaking deliberately stops at handing back a room id: the client then
+   * joins that room by the same path a friend link takes, so the two ways of
+   * starting a game converge immediately and only one of them has to be right.
+   */
+  | { readonly type: 'queue'; readonly playerId: string; readonly name?: string }
+  | { readonly type: 'cancel-queue' }
   | { readonly type: 'ping' };
 
 export type ServerMessage =
+  | {
+      readonly type: 'queued';
+      /** How many people are waiting, including this one. */
+      readonly waiting: number;
+    }
+  | { readonly type: 'queue-cancelled' }
+  | {
+      readonly type: 'matched';
+      readonly gameId: string;
+      readonly seat: SeatIndex;
+    }
   | {
       readonly type: 'joined';
       /** `null` means spectating: the room already had two players. */

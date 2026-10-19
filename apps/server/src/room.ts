@@ -63,6 +63,18 @@ export class Room {
   }
 
   /**
+   * Hold a seat for a player before they arrive.
+   *
+   * A matchmade room is created before either player has connected to it, so
+   * the seats are assigned at match time. Without that, whoever opened the
+   * link first would take seat 0 — including anyone who guessed the room id,
+   * which would put a stranger in a matched game.
+   */
+  reserve(playerId: string, seat: SeatIndex): void {
+    this.#seats.set(playerId, seat);
+  }
+
+  /**
    * Seat a connection.
    *
    * Seats are remembered by `playerId`, so a refresh or a dropped connection
